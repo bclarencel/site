@@ -7,49 +7,15 @@
         <p>At Woodworks Hardwood Refinishing, we offer several different options for your floor. Deciding which option is the best fit for your hardwood will depend on the severity of your floor’s current condition and the look that you want to achieve.</p>
       </div>
     </div>
-    <div class="row ">
+    <div class="row">
+      {% for service in site.data.services %}
       <div class="col-sm-6 col-md-4">
         <div class="service-item">
-          <img src="img/250x250_sand_and_stain.jpg" alt="Img">
-          <h4>Sand & Finish</h4>
-          <p>The most popular choice for revitalizing old hardwood floors, the process consists of sanding, buffing, staining and finishing.</p>
+          <img src="{{ service.image }}" alt="Img">
+          <h4>{{ service.title }}</h4>
+          <p>{{ service.description }}</p>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="service-item">
-          <img src="img/250x250_buffer_flooring.jpg" alt="Img">
-          <h4>Buff & Coat</h4>
-          <p>A buff & coat is most appropriate for floors that are in good condition, but could use a bit of a polish.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="service-item">
-          <img src="img/250x250_floor_stain.png" alt="Img">
-          <h4>Staining</h4>
-          <p>Staining is an optional part of the sand & finish process. Staining a floor can also help hide water damage and pet stains. </p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="service-item">
-          <img src="img/250x250_floor_repair.jpg" alt="Img">
-          <h4>Repairs</h4>
-          <p>Damaged floorboards can be removed and replaced with closely-matching boards.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="service-item">
-          <img src="img/250x250_game_lines.jpg" alt="Img">
-          <h4>Gym Lines</h4>
-          <p>For gymnasiums, game lines and custom logos can be taped and painted.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="service-item">
-          <img src="img/250x250_wood_stairs.jpg" alt="Img">
-          <h4>Stair Treads</h4>
-          <p>Wooden stair treads can be refinished at the same time as a main floor area.</p>
-        </div>
-      </div>
-    </div>
+      {% endfor %}
   </div>
 </section>
